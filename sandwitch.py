@@ -1,7 +1,6 @@
 # This program shows how to modify lists using while loop.
-sandwitch_orders = ['cheese sandwitch','chicken sandwitch','egg sandwitch','grilled chicken sandwitch','cheese sandwitch']
+sandwitch_orders = []
 finished_sandwitches = []
-#restaurant_active = True
 while sandwitch_orders:
 	for sandwitch in sandwitch_orders:
 		if sandwitch=='cheese sandwitch':

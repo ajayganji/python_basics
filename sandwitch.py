@@ -1,17 +1,18 @@
-# This program shows how to modify lists using while loop.
+# This program shows how to modify lists using while loop. 
+# It takes input data from the customer and saves it in a list. 
 sandwitch_orders = []
-finished_sandwitches = []
-while sandwitch_orders:
-	for sandwitch in sandwitch_orders:
-		if sandwitch=='cheese sandwitch':
-			print("We are out of cheese sandwitch")
-			while 'cheese sandwitch' in sandwitch_orders:
-				sandwitch_orders.remove('cheese sandwitch')
-		else:
-			prepared_sandwitch = sandwitch_orders.pop()
-			finished_sandwitches.append(prepared_sandwitch)
-			print(f"I prepared your {prepared_sandwitch}.")
-print("\nThe prepared sandwitchs are: \n")
-for sandwitch in finished_sandwitches:
-	print(sandwitch.title())
-print()
+choice = ("\nPlease enter the sandwitches you want.")
+choice += ("\nYou can enter only one sandwitch at a time.")
+choice += ("\nEnter 'save' to submit your order.\n") 
+active = True
+while active:
+	user_choice = input(choice)
+	if user_choice=='save':	
+		print("\nSubmitting your order----")
+		active = False
+	else:
+		print(f"Adding {user_choice} to your list.")
+		sandwitch_orders.append(user_choice)
+print("Here is your ordered list:")
+for sandwitch in sandwitch_orders:
+	print(f"\t{sandwitch}")

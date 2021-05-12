@@ -1,4 +1,4 @@
-
+#This program shows how to use functions and while loops so that the user input data is stored in dictionary.
 def artist_info(artist_name,song_name,album_name=None,):
 	if album_name:
 		info = {'name':artist_name.title(),'song':song_name,'album':album_name.title(),}
